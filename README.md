@@ -13,7 +13,7 @@ To get the most out of CongrS, make sure you register!  Registration gives you a
 
 ####Data Visualization
 
-Awesome data visualization that will show where contributions are coming from and how they are affecting votes.
+Awesome data visualization that will show where contributions are coming from and how they are effecting votes.
 
 ###Contact Us
 
