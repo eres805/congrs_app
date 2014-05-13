@@ -44,6 +44,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'httparty'
 
+gem 'json'
+
 group :development do
   gem 'pry-rails'
 end

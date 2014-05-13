@@ -4,7 +4,7 @@ class CreateStates < ActiveRecord::Migration
     	t.string :name
     	t.string :abbreviation
     	t.integer :population
-    	t.integer :representatives
+    	t.integer :num_reps
     end
   end
 end

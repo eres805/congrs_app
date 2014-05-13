@@ -7,7 +7,6 @@ namespace :representatives do
 		results = HTTParty.get("https://congress.api.sunlightfoundation.com/legislators?title=Rep&per_page=all&apikey=7ad1d136628443878ceb8655871a8799")
 	  	@results = results.to_hash["results"]
 
-
 	  	@results.each do |representative_data|
 	  		Representative.create({
 	  			title: representative_data["title"],
@@ -24,7 +23,7 @@ namespace :representatives do
 
 	  			govtrack_id: representative_data["govtrack_id"],
 	  			crp_id: representative_data["crp_id"],
-	  			bioguide_id: representative_data["bioguide_id"]
+	  			bioguide_id: representative_data["bioguide_id"],
 	  			votesmart_id: representative_data["votesmart_id"],
 
 	  			office: representative_data["office"],
@@ -37,15 +36,11 @@ namespace :representatives do
 	  			birthday: representative_data["birthday"],
 
 	  			district: representative_data["district"],
-	  			state: representative_data["state"],
+	  			state: representative_data["state"]
 	  			})
-
-	  	end
+		end
 		
 	end
-
-
-
 
 end
 
