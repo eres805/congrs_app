@@ -15,6 +15,7 @@ class CreateRepresentatives < ActiveRecord::Migration
 
     	t.string :govtrack_id
     	t.string :crp_id
+    	t.string :bioguide_id
     	t.integer :votesmart_id
 
     	t.string :office
@@ -26,6 +27,7 @@ class CreateRepresentatives < ActiveRecord::Migration
     	t.date :term_end
     	t.date :birthday
 
+    	t.integer :district
     	t.references :state
     end
   end

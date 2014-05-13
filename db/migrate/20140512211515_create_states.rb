@@ -2,9 +2,9 @@ class CreateStates < ActiveRecord::Migration
   def change
     create_table :states do |t|
     	t.string :name
-    	t.string :abr
+    	t.string :abbreviation
     	t.integer :population
-    	t.
+    	t.integer :representatives
     end
   end
 end
