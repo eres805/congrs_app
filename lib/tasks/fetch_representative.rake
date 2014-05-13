@@ -1,3 +1,6 @@
+# require 'pry'
+# binding.pry
+
 namespace :representatives do
 
 	desc "fetch representative"
@@ -7,7 +10,10 @@ namespace :representatives do
 		results = HTTParty.get("https://congress.api.sunlightfoundation.com/legislators?title=Rep&per_page=all&apikey=7ad1d136628443878ceb8655871a8799")
 	  	@results = results.to_hash["results"]
 
+
 	  	@results.each do |representative_data|
+	  		state_abbr = representative_data["state"]
+	  		state = State.find_by(abbreviation: state_abbr)
 	  		Representative.create({
 	  			title: representative_data["title"],
 	  			first_name: representative_data["first_name"],
@@ -36,7 +42,7 @@ namespace :representatives do
 	  			birthday: representative_data["birthday"],
 
 	  			district: representative_data["district"],
-	  			state: representative_data["state"]
+	  			state_id: state.id
 	  			})
 		end
 		

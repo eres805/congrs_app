@@ -16,7 +16,7 @@
 @in = State.create(name: "Indiana", abbreviation: 'IN', population: 6501582, num_reps: 9)
 @ia = State.create(name: "Iowa", abbreviation: 'IA', population: 3053787, num_reps: 4)
 @ks = State.create(name: "Kansas", abbreviation: 'KS', population: 2863813, num_reps: 4)
-@ky = State.create(name: "Kentucky", abbreviation: 'KT', population: 4350606, num_reps: 6)
+@ky = State.create(name: "Kentucky", abbreviation: 'KY', population: 4350606, num_reps: 6)
 @la = State.create(name: "Louisiana", abbreviation: 'LA', population: 4553962, num_reps: 6)
 @me = State.create(name: "Maine", abbreviation: 'ME', population: 1333074, num_reps: 2)
 @md = State.create(name: "Maryland", abbreviation: 'MD', population: 5789929, num_reps: 8)

@@ -8,7 +8,10 @@ namespace :senators do
 	  	@results = results.to_hash["results"]
 
 
+
 	  	@results.each do |senator_data|
+	  		state_abbr = senator_data["state"]
+	  		state = State.find_by(abbreviation: state_abbr)
 	  		Senator.create({
 	  			title: senator_data["title"],
 	  			first_name: senator_data["first_name"],
@@ -36,9 +39,9 @@ namespace :senators do
 	  			term_end: senator_data["term_end"],
 	  			birthday: senator_data["birthday"],
 
-	  			senate_rank: senator_data["senate_rank"],
+	  			state_rank: senator_data["state_rank"],
 	  			senate_class: senator_data["senate_class"],
-	  			state: senator_data["state"]
+	  			state_id: state.id
 	  			})
 	  	end
 		
