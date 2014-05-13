@@ -39,3 +39,15 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'congress'
+
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'httparty'
+
+group :development do
+  gem 'pry-rails'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
