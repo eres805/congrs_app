@@ -28,7 +28,7 @@ class CreateRepresentatives < ActiveRecord::Migration
     	t.date :birthday
 
     	t.integer :district
-    	t.references :state
+    	t.references :state, index: true
     end
   end
 end

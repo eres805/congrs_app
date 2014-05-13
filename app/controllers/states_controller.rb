@@ -34,7 +34,7 @@ class StatesController < ApplicationController
 
   private
   def state_params
-    params.require(:name).permit(:abbreviation, :population, :representatives)
+    params.require(:name).permit(:abbreviation, :population, :num_reps)
   end
 
 end

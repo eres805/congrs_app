@@ -1,6 +1,6 @@
 namespace :representatives do
 
-	desc "fetch representatives"
+	desc "fetch representative"
 	
 	task :fetch => :environment do
 		

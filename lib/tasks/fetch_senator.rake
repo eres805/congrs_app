@@ -38,7 +38,7 @@ namespace :senators do
 
 	  			senate_rank: senator_data["senate_rank"],
 	  			senate_class: senator_data["senate_class"],
-	  			state: senator_data["state"],
+	  			state: senator_data["state"]
 	  			})
 	  	end
 		

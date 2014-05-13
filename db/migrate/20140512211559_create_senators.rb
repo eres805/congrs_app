@@ -30,7 +30,7 @@ class CreateSenators < ActiveRecord::Migration
 
     	t.string :state_rank
     	t.string :senate_class
-    	t.references :state
+    	t.references :state, index: true
 
     end
   end

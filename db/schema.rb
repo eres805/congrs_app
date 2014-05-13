@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 20140512211559) do
     t.integer "state_id"
   end
 
+  add_index "representatives", ["state_id"], name: "index_representatives_on_state_id", using: :btree
+
   create_table "senators", force: true do |t|
     t.string  "title"
     t.string  "first_name"
@@ -68,6 +70,8 @@ ActiveRecord::Schema.define(version: 20140512211559) do
     t.string  "senate_class"
     t.integer "state_id"
   end
+
+  add_index "senators", ["state_id"], name: "index_senators_on_state_id", using: :btree
 
   create_table "states", force: true do |t|
     t.string  "name"
