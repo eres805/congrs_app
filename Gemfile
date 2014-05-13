@@ -46,10 +46,24 @@ gem 'httparty'
 
 gem 'json'
 
+gem 'simplecov', :require => false, :group => :test
+
+
 group :development do
   gem 'pry-rails'
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'capybara'
+  gem 'pry-rails'
+  gem 'minitest'
+  gem 'shoulda-matchers'
+  gem "shoulda-callback-matchers", "~> 1.0"
 end
+
+group :development do
+  gem "rails-erd"
+end
+
+

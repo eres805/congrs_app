@@ -1,0 +1,38 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/wdi/Documents/final_project/congrs_app/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/wdi/Documents/final_project/congrs_app/app/helpers/representatives_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/wdi/Documents/final_project/congrs_app/app/models/representative.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/wdi/Documents/final_project/congrs_app/app/models/senator.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/wdi/Documents/final_project/congrs_app/app/models/state.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1400019811
+  }
+}

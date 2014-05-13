@@ -20,8 +20,8 @@ class CreateRepresentatives < ActiveRecord::Migration
 
     	t.string :office
     	t.string :contact_form
-    	t.integer :fax
-    	t.integer :phone
+    	t.string :fax
+    	t.string :phone
 
     	t.date :term_start
     	t.date :term_end

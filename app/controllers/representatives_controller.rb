@@ -64,7 +64,6 @@ class RepresentativesController < ApplicationController
   def stateadd
     @representative[:representative].state = State.find_by(name: @representative[:state])
     @representative[:state].save
-    redirect_to songs_path
   end
 
   private
