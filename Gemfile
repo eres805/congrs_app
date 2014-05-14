@@ -46,6 +46,8 @@ gem 'httparty'
 
 gem 'json'
 
+gem 'foundation-rails'
+
 gem 'simplecov', :require => false, :group => :test
 
 

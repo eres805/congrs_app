@@ -21,8 +21,8 @@ class CreateSenators < ActiveRecord::Migration
 
     	t.string :office
     	t.string :contact_form
-    	t.string :fax
-    	t.string :phone
+    	t.integer :fax
+    	t.integer :phone
 
     	t.date :term_start
     	t.date :term_end

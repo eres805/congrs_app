@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'senator/index'
+
+  get 'senator/show'
+
   resources :users
 
   resources :states do
