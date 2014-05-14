@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'welcome/index'
-
   resources :users
 
   resources :states do
@@ -9,6 +7,7 @@ Rails.application.routes.draw do
     resources :representatives, shallow: true
   end
 
+  get 'welcome/index'
   root 'welcome#index'
   
 end

@@ -10,12 +10,12 @@
   <tbody>
     <% @representatives.each do |representative| %>
       <tr>
+        <td><%= link_to 'Show', representative %></td>
         <td><%= representative.first_name %></td>
         <td><%= representative.last_name %></td>
 
-        <td><%= link_to 'Show', representative %></td>
-        <td><%= link_to 'Edit', edit_representative_path(representative) %></td>
-        <td><%= link_to 'Destroy', representative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<!--         <td><%= link_to 'Edit', edit_representative_path(representative) %></td>
+        <td><%= link_to 'Destroy', representative, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
