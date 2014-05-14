@@ -82,7 +82,7 @@ describe Senator do
 	end	
 
 	it "should have a term start date of" do
-		expect(@sen.term_start).to eq("2013-01-03")
+		expect(@sen.term_start).to eq("2013-01-03").to_s
 	end	
 
 	it "should have a term end date of" do
