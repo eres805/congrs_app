@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'senator/index'
-
-  get 'senator/show'
+  get 'welcome/index'
 
   resources :users
 
@@ -10,5 +8,7 @@ Rails.application.routes.draw do
     resources :senators, shallow: true
     resources :representatives, shallow: true
   end
+
+  root 'welcome#index'
   
 end

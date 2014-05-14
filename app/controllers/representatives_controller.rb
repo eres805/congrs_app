@@ -1,15 +1,18 @@
 class RepresentativesController < ApplicationController
   before_action :set_representative, only: [:show, :edit, :update, :destroy]
 
+  before_filter :determine_scope
+
   # GET /representatives
   # GET /representatives.json
   def index
-    @representatives = Representative.all
+    @representatives = @scope.all
   end
 
   # GET /representatives/1
   # GET /representatives/1.json
   def show
+    @representative = Representative.find(params[:id])
   end
 
   # GET /representatives/new
@@ -67,6 +70,13 @@ class RepresentativesController < ApplicationController
   end
 
   private
+
+    def determine_scope
+      @scope = if params[:state_id]
+        State.find(params[:state_id]).representatives
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_representative
       @representative = Representative.find(params[:id])

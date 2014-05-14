@@ -20,7 +20,7 @@
       <tr>
         <td><%= state.name %></td>
         <td><%= state.abbreviation %></td>
-        <td><%= state.population %></td>
+        <td><%= number_with_delimiter(state.population, :delimiter => ',') %></td>
         <td><%= state.num_reps %></td>
   <!--       <td><%= link_to 'Show', state %></td>
         <td><%= link_to 'Edit', edit_state_path(state) %></td>
