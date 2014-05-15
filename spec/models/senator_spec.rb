@@ -82,15 +82,15 @@ describe Senator do
 	end	
 
 	it "should have a term start date of" do
-		expect(@sen.term_start).to eq("2013-01-03").to_s
+		expect(@sen.term_start.strftime("%Y-%m-%d")).to eq("2013-01-03")
 	end	
 
 	it "should have a term end date of" do
-		expect(@sen.term_end).to eq("2019-01-03")
+		expect(@sen.term_end.strftime("%Y-%m-%d")).to eq("2019-01-03")
 	end	
 
 	it "should have a birthday of" do
-		expect(@sen.birthday).to eq("1951-03-01")
+		expect(@sen.birthday.strftime("%Y-%m-%d")).to eq("1951-03-01")
 	end	
 
 	it "should have a state rank" do

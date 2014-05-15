@@ -81,15 +81,15 @@ describe Representative do
 	end	
 
 	it "should have a term start date of" do
-		expect(@rep.term_start).to eq("2013-12-12")
+		expect(@rep.term_start.strftime("%Y-%m-%d")).to eq("2013-12-12")
 	end	
 
 	it "should have a term end date of" do
-		expect(@rep.term_end).to eq("2015-01-03")
+		expect(@rep.term_end.strftime("%Y-%m-%d")).to eq("2015-01-03")
 	end	
 
 	it "should have a birthday of" do
-		expect(@rep.birthday).to eq("1963-07-17")
+		expect(@rep.birthday.strftime("%Y-%m-%d")).to eq("1963-07-17")
 	end	
 
 	it "should have a district" do

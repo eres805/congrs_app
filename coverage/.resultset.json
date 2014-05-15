@@ -13,6 +13,10 @@
         1,
         null
       ],
+      "/Users/wdi/Documents/final_project/congrs_app/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
       "/Users/wdi/Documents/final_project/congrs_app/app/models/representative.rb": [
         1,
         null,
@@ -35,9 +39,10 @@
         1,
         1,
         null,
+        null,
         null
       ]
     },
-    "timestamp": 1400078696
+    "timestamp": 1400128828
   }
 }
