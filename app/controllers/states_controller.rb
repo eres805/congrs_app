@@ -6,6 +6,9 @@ class StatesController < ApplicationController
 
   def show
     @state = State.find(params[:id])
+    @state_district = @state.representatives.where(params[:district])
+    @state_district_sort = @state_district.order(district: :asc)
+      
   end
 
   def new

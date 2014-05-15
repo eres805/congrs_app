@@ -6,7 +6,7 @@
 </div>
 
 <div class="row">
-  <div class="small-6 small columns">
+  <div class="small-7 small columns">
 		<dl class="accordion" data-accordion>
      	<dd>
     		<a href="#representatives">Representatives</a>
@@ -18,18 +18,20 @@
 				          <th>First Name</th>
 				          <th>Last Name</th>
 				          <th>District</th>
+				          <th>Party</th>
 				          <th>Term Start</th>
 				          <th>Term End</th>
 				        </tr>
 			      	</thead>
 
 		      	<tbody>
-						<% @state.representatives.each do |rep| %>
+						<% @state_district_sort.each do |rep| %>
 
 						<tr>
 	            <td><%= link_to rep.first_name, rep %></td>
 	            <td><%= link_to rep.last_name, rep %></td>
 	            <td><%= rep.district %></td>
+	            <td><%= rep.party %></td>
 	            <td><%= rep.term_start.strftime("%m/%d/%Y") %></td>
 	            <td><%= rep.term_end.strftime("%m/%d/%Y") %></td>
 
@@ -52,6 +54,7 @@
 				          <th>First Name</th>
 				          <th>Last Name</th>
 				          <th>State Rank</th>
+				          <th>Party</th>
 				          <th>Term Start</th>
 				          <th>Term End</th>
 				        </tr>
@@ -64,6 +67,7 @@
 	            <td><%= link_to sen.first_name, sen %></td>
 	            <td><%= link_to sen.last_name, sen %></td>
 	            <td><%= sen.state_rank.capitalize %></td>
+	            <td><%= sen.party %></td>
 	            <td><%= sen.term_start.strftime("%m/%d/%Y") %></td>
 	            <td><%= sen.term_end.strftime("%m/%d/%Y") %></td>
 
