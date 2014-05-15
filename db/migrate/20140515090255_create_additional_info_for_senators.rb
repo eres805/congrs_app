@@ -1,7 +1,7 @@
 class CreateAdditionalInfoForSenators < ActiveRecord::Migration
   def change
     create_table :additional_info_for_senators do |t|
-			t.integer :first_elected
+		t.integer :first_elected
     	t.integer :next_election
     	t.integer :money_spent
     	t.integer :cash_on_hand
