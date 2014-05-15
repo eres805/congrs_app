@@ -18,6 +18,19 @@
 <div class="row">
   <div class="small-6 small-centered columns">
 		<dl class="accordion" data-accordion>
+		  
+		  <dd>
+		    <a href="#political_info">Political Info</a>
+		    <div id="political_info" class="content">
+					<p>
+						<b>Term Start</b>: <%= @representative.term_start.strftime("%m/%d/%Y") %><br />
+						<b>Term End</b>: <%= @representative.term_end.strftime("%m/%d/%Y") %><br />
+						<b>State</b>: <%= @state %><br />
+						<b>State District</b>: <%= @representative.district %><br />
+					</p>
+		    </div>
+		  </dd>
+		  
 		  <dd>
 		    <a href="#social_media">Social Media</a>
 		    <div id="social_media" class="content">
@@ -41,17 +54,6 @@
 		    </div>
 		  </dd>
 
-		  <dd>
-		    <a href="#political_info">Political Info</a>
-		    <div id="political_info" class="content">
-					<p>
-						<b>Term Start</b>: <%= @representative.term_start.strftime("%m/%d/%Y") %><br />
-						<b>Term End</b>: <%= @representative.term_end.strftime("%m/%d/%Y") %><br />
-						<b>State</b>: <%= @state %><br />
-						<b>State District</b>: <%= @representative.district %><br />
-					</p>
-		    </div>
-		  </dd>
 		</dl>
 	</div>
 </div>

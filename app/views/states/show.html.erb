@@ -1,3 +1,5 @@
+<br />
+
 <div class="row">
   <div class="small-5 small columns">
 		<%= image_tag("state_flags/#{@state.abbreviation}-Flag-256.png") %>
@@ -9,7 +11,7 @@
   <div class="small-7 small columns">
 		<dl class="accordion" data-accordion>
      	<dd>
-    		<a href="#representatives">Representatives</a>
+    		<a href="#representatives">Representatives (<%= @state.representatives.count %>)</a>
 				<div id="representatives" class="content">
 				
 						<table>
