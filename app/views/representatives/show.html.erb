@@ -1,10 +1,18 @@
+
 <div class="row">
-  <div class="small-6 small-centered columns">
-		<h2>
-			<%= @representative.title %>. <%= @representative.first_name %> <%= @representative.last_name %>
-		</h2>
+  <div class="small-4 small-centered columns">
+		<img src="http://theunitedstates.io/images/congress/225x275/<%= @representative.bioguide_id %>.jpg" height="150" >
 	</div>
 </div>
+
+<div class="row">
+  <div class="small-4 small-centered columns">
+		<h3>
+			<%= @representative.title %>. <%= @representative.first_name %> <%= @representative.last_name %>
+		</h3>
+	</div>
+</div>
+
 
 <div class="row">
   <div class="small-6 small-centered columns">
@@ -36,13 +44,13 @@
 		    <a href="#political_info">Political Info</a>
 		    <div id="political_info" class="content">
 					<p>
-						<b>Term Start</b>: <%= @representative.term_start %><br />
-						<b>Term End</b>: <%= @representative.term_end %><br />
+						<b>Term Start</b>: <%= @representative.term_start.strftime("%m/%d/%Y") %><br />
+						<b>Term End</b>: <%= @representative.term_end.strftime("%m/%d/%Y") %><br />
 						<b>State</b>: <%= @state %><br />
 						<b>State District</b>: <%= @representative.district %><br />
 					</p>
 		    </div>
 		  </dd>
 		</dl>
-		</div>
+	</div>
 </div>

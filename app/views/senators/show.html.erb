@@ -1,2 +1,58 @@
-<h1>Senator#show</h1>
-<p>Find me in app/views/senator/show.html.erb</p>
+
+<div class="row">
+  <div class="small-4 small-centered columns">
+		<img src="http://theunitedstates.io/images/congress/225x275/<%= @senator.bioguide_id %>.jpg" height="150" >
+	</div>
+</div>
+
+<div class="row">
+  <div class="small-4 small-centered columns">
+		<h3>
+			<%= @senator.title %>. <%= @senator.first_name %> <%= @senator.last_name %>
+		</h3>
+	</div>
+</div>
+
+
+<div class="row">
+  <div class="small-6 small-centered columns">
+		<dl class="accordion" data-accordion>
+		  <dd>
+		    <a href="#social_media">Social Media</a>
+		    <div id="social_media" class="content">
+					<p>		
+						<a href="http://facebook.com/<%= @senator.facebook_id %>" target="_blank">Facebook</a><br />
+						<a href="http://twitter.com/<%= @senator.twitter_id %>" target="_blank">Twitter</a><br />
+						<a href="http://youtube.com/<%= @senator.youtube_id %>" target="_blank">YouTube</a><br />
+					</p>
+		    </div>
+		  </dd>
+
+		  <dd>
+		    <a href="#contact_info">Contact Info</a>
+		    <div id="contact_info" class="content">
+					<p>
+						<b>Phone</b>: <%= @senator.phone %><br />
+						<b>Fax</b>: <%= @senator.fax %><br />
+						<b>Office</b>: <%= @senator.office %><br />
+						<b>Contact Form</b>: <a href="<%= @senator.contact_form %>" target="_blank">Click Here</a>
+					</p>
+		    </div>
+		  </dd>
+
+		  <dd>
+		    <a href="#political_info">Political Info</a>
+		    <div id="political_info" class="content">
+					<p>
+						<b>Term Start</b>: <%= @senator.term_start.strftime("%m/%d/%Y") %><br />
+						<b>Term End</b>: <%= @senator.term_end.strftime("%m/%d/%Y") %><br />
+						<b>State</b>: <%= @state %><br />
+						<b>State Rank</b>: <%= @senator.state_rank.capitalize %><br />
+						<b>Senate Class</b>: <%= @senator.senate_class %><br />
+						
+					</p>
+		    </div>
+		  </dd>
+		</dl>
+	</div>
+</div>
