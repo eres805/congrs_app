@@ -11,6 +11,9 @@
 		<h3>
 			<%= @senator.title %>. <%= @senator.first_name %> <%= @senator.last_name %>
 		</h3>
+		<p>
+			<%= @senator.state_rank.capitalize %> Senator from <%= @senator.state.name %>
+		</p>
 	</div>
 </div>
 
@@ -25,14 +28,14 @@
 					<p>
 						<b>Term Start</b>: <%= @senator.term_start.strftime("%m/%d/%Y") %><br />
 						<b>Term End</b>: <%= @senator.term_end.strftime("%m/%d/%Y") %><br />
-						<b>State</b>: <%= @state %><br />
+						<b>State</b>: <%= @senator.state.name %><br />
 						<b>State Rank</b>: <%= @senator.state_rank.capitalize %><br />
 						<b>Senate Class</b>: <%= @senator.senate_class %><br />
 						
 					</p>
 		    </div>
 		  </dd>
-		  
+
 		  <dd>
 		    <a href="#social_media">Social Media</a>
 		    <div id="social_media" class="content">
