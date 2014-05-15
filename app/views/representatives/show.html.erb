@@ -1,2 +1,48 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="small-6 small-centered columns">
+		<h2>
+			<%= @representative.title %>. <%= @representative.first_name %> <%= @representative.last_name %>
+		</h2>
+	</div>
+</div>
 
+<div class="row">
+  <div class="small-6 small-centered columns">
+		<dl class="accordion" data-accordion>
+		  <dd>
+		    <a href="#social_media">Social Media</a>
+		    <div id="social_media" class="content">
+					<p>		
+						<a href="http://facebook.com/<%= @representative.facebook_id %>" target="_blank">Facebook</a><br />
+						<a href="http://twitter.com/<%= @representative.twitter_id %>" target="_blank">Twitter</a><br />
+						<a href="http://youtube.com/<%= @representative.youtube_id %>" target="_blank">YouTube</a><br />
+					</p>
+		    </div>
+		  </dd>
+
+		  <dd>
+		    <a href="#contact_info">Contact Info</a>
+		    <div id="contact_info" class="content">
+					<p>
+						<b>Phone</b>: <%= @representative.phone %><br />
+						<b>Fax</b>: <%= @representative.fax %><br />
+						<b>Office</b>: <%= @representative.office %><br />
+						<b>Contact Form</b>: <a href="<%= @representative.contact_form %>" target="_blank">Click Here</a>
+					</p>
+		    </div>
+		  </dd>
+
+		  <dd>
+		    <a href="#political_info">Political Info</a>
+		    <div id="political_info" class="content">
+					<p>
+						<b>Term Start</b>: <%= @representative.term_start %><br />
+						<b>Term End</b>: <%= @representative.term_end %><br />
+						<b>State</b>: <%= @state %><br />
+						<b>State District</b>: <%= @representative.district %><br />
+					</p>
+		    </div>
+		  </dd>
+		</dl>
+		</div>
+</div>
