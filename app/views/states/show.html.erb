@@ -11,7 +11,7 @@
   <div class="small-7 small columns">
 		<dl class="accordion" data-accordion>
      	<dd>
-    		<a href="#representatives">Representatives (<%= @state.representatives.count %>)</a>
+    		<a href="#representatives">Representatives (<%= @state.num_reps %>)</a>
 				<div id="representatives" class="content">
 				
 						<table>
@@ -62,9 +62,10 @@
 			      	</thead>
 
 		      	<tbody>
-						<% @state.senators.each do |sen| %>
+			
+			<% @state.senators.each do |sen| %>
 
-						<tr>
+			<tr>
 	            <td><%= link_to sen.first_name, sen %></td>
 	            <td><%= link_to sen.last_name, sen %></td>
 	            <td><%= sen.state_rank.capitalize %></td>
