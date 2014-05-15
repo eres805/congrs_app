@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515080418) do
+ActiveRecord::Schema.define(version: 20140515090255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,25 @@ ActiveRecord::Schema.define(version: 20140515080418) do
   end
 
   add_index "additional_info_for_representatives", ["representative_id"], name: "index_additional_info_for_representatives_on_representative_id", using: :btree
+
+  create_table "additional_info_for_senators", force: true do |t|
+    t.integer "first_elected"
+    t.integer "next_election"
+    t.integer "money_spent"
+    t.integer "cash_on_hand"
+    t.integer "debt"
+    t.date    "last_updated"
+    t.string  "org_name"
+    t.integer "org_total_given"
+    t.string  "industry_code"
+    t.string  "industry_name"
+    t.integer "industry_money_individuals"
+    t.integer "industry_money_pacs"
+    t.string  "industry_money_total"
+    t.integer "senator_id"
+  end
+
+  add_index "additional_info_for_senators", ["senator_id"], name: "index_additional_info_for_senators_on_senator_id", using: :btree
 
   create_table "representatives", force: true do |t|
     t.string  "title"
