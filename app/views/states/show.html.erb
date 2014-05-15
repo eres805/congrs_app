@@ -24,9 +24,9 @@
 				        </tr>
 			      	</thead>
 
-		      	<tbody>
+		      	<tbody>						
 						<% @state_district_sort.each do |rep| %>
-
+						
 						<tr>
 	            <td><%= link_to rep.first_name, rep %></td>
 	            <td><%= link_to rep.last_name, rep %></td>
@@ -34,7 +34,6 @@
 	            <td><%= rep.party %></td>
 	            <td><%= rep.term_start.strftime("%m/%d/%Y") %></td>
 	            <td><%= rep.term_end.strftime("%m/%d/%Y") %></td>
-
           	</tr>
 
           	<% end %>
@@ -70,7 +69,6 @@
 	            <td><%= sen.party %></td>
 	            <td><%= sen.term_start.strftime("%m/%d/%Y") %></td>
 	            <td><%= sen.term_end.strftime("%m/%d/%Y") %></td>
-
           	</tr>
 
           	<% end %>
