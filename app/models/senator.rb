@@ -4,5 +4,9 @@ class Senator < ActiveRecord::Base
 	has_many :additional_info_for_senators
 
 
+	def number_to_currency(number)
+    	number_to_currency(number, :unit => "R$ ", :separator => ",", :delimiter => ".")
+	end
+
 end
 

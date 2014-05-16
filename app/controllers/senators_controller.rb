@@ -10,6 +10,7 @@ class SenatorsController < ApplicationController
 
   def show
   	@senator = Senator.find(params[:id])
+
   end
 
   private

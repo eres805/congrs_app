@@ -59,6 +59,34 @@
 		    </div>
 		  </dd>
 
+		  <dd>
+		    <a href="#industry_contribution">Contributions by Industry</a>
+		    <div id="industry_contribution" class="content">
+				<table>
+						<thead>
+				      <tr>
+				         <th>Industry Name</th>
+				         <th>Individual $</th>
+				         <th>SuperPac $</th>
+				         <th>Total Contributions</th>
+				       </tr>
+			      </thead>
+        	<tbody>						
+						<% @senator.additional_info_for_senators.each do |sen| %>
+						
+						<tr>
+	            <td><%= sen.industry_name %></td>
+	            <td><%= number_to_currency(sen.industry_money_individuals) %></td>
+	            <td><%= number_to_currency(sen.industry_money_pacs) %></td>
+	            <td><%= number_to_currency(sen.industry_money_total) %></td>
+          	</tr>
+
+          	<% end %>
+	    	  	</tbody>
+    			</table>
+		    </div>
+		  </dd>
+
 		</dl>
 	</div>
 </div>
