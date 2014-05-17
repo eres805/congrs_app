@@ -17,6 +17,15 @@
         1,
         null
       ],
+      "/Users/wdi/Documents/final_project/congrs_app/app/models/additional_info_for_senator.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/wdi/Documents/final_project/congrs_app/app/models/representative.rb": [
         1,
         null,
@@ -33,6 +42,10 @@
         1,
         null,
         null,
+        1,
+        0,
+        null,
+        null,
         null,
         null
       ],
@@ -43,9 +56,11 @@
         1,
         null,
         null,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1400176714
+    "timestamp": 1400297832
   }
 }

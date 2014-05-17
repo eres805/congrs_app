@@ -5,7 +5,8 @@ describe Senator do
 	it { should belong_to :state }
 
 	before :each do 
-		@sen = Senator.create(title: "Sen", first_name: "Deb", middle_name: nil, last_name: "Fischer", name_suffix: nil, gender: "F", party: "R", facebook_id: "531623656856934", twitter_id: "SenatorFischer", youtube_id: "Deb", govtrack_id: "412556", crp_id: "N00033443", bioguide_id: "F000463", votesmart_id: 41963, office: "383 Russell Senate Office Building", contact_form: "http://www.fischer.senate.gov/public/index.cfm/contact", fax: "202-228-1325", phone: "202-224-6551", term_start: "2013-01-03", term_end: "2019-01-03", birthday: "1951-03-01", state_rank: "junior", senate_class: "1", state_id: 27)
+		@sen = Senator.create(id: 1, title: "Sen", first_name: "Deb", middle_name: nil, last_name: "Fischer", name_suffix: nil, gender: "F", party: "R", facebook_id: "531623656856934", twitter_id: "SenatorFischer", youtube_id: "Deb", govtrack_id: "412556", crp_id: "N00033443", bioguide_id: "F000463", votesmart_id: 41963, office: "383 Russell Senate Office Building", contact_form: "http://www.fischer.senate.gov/public/index.cfm/contact", fax: "202-228-1325", phone: "202-224-6551", term_start: "2013-01-03", term_end: "2019-01-03", birthday: "1951-03-01", state_rank: "junior", senate_class: "1", state_id: 27)
+		# @sen_info = AdditionalInfoForSenator.create(industry_money_total: 50000, senator_id: 1)
 	end
 
 
@@ -88,7 +89,7 @@ describe Senator do
 	it "should have a term end date of" do
 		expect(@sen.term_end.strftime("%Y-%m-%d")).to eq("2019-01-03")
 	end	
-
+ 
 	it "should have a birthday of" do
 		expect(@sen.birthday.strftime("%Y-%m-%d")).to eq("1951-03-01")
 	end	
@@ -104,5 +105,9 @@ describe Senator do
 	it "should have a state id" do
 		expect(@sen.state_id).to eq(27)
 	end	
+
+	# it "should convert the number for an industries total contributions to currency form " do
+	# 	expect(number_to_currency(@sen.additional_info_for_senators.industry_money_total)).to eq("$50,000")
+	# end
 
 end
