@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515090255) do
+ActiveRecord::Schema.define(version: 20140519190854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,29 @@ ActiveRecord::Schema.define(version: 20140515090255) do
   end
 
   add_index "additional_info_for_senators", ["senator_id"], name: "index_additional_info_for_senators_on_senator_id", using: :btree
+
+  create_table "industry_contributions_for_senators", force: true do |t|
+    t.string  "industry_code"
+    t.string  "industry_name"
+    t.integer "industry_money_individuals"
+    t.integer "industry_money_pacs"
+    t.string  "industry_money_total"
+    t.integer "senator_id"
+  end
+
+  add_index "industry_contributions_for_senators", ["senator_id"], name: "index_industry_contributions_for_senators_on_senator_id", using: :btree
+
+  create_table "political_summary_for_senators", force: true do |t|
+    t.integer "first_elected"
+    t.integer "next_election"
+    t.integer "money_spent"
+    t.integer "cash_on_hand"
+    t.integer "debt"
+    t.string  "last_updated"
+    t.integer "senator_id"
+  end
+
+  add_index "political_summary_for_senators", ["senator_id"], name: "index_political_summary_for_senators_on_senator_id", using: :btree
 
   create_table "representatives", force: true do |t|
     t.string  "title"

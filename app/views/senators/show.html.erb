@@ -34,6 +34,22 @@
 		  </dd>
 
 		  <dd>
+		    <a href="#political_summary">Political Summary</a>
+		    <div id="political_summary" class="content">
+					<p>	
+						
+			       <b>First Elected</b>: <%= @senator.political_summary_for_senator.first_elected %><br />
+			       <b>Next Election</b>: <%= @senator.political_summary_for_senator.next_election %><br />
+			       <b>Money Spent</b>: <%= number_to_currency(@senator.political_summary_for_senator.money_spent) %><br />
+			       <b>Cash on Hand</b>: <%= number_to_currency(@senator.political_summary_for_senator.cash_on_hand) %><br />
+			       <b>Debt</b>: <%= number_to_currency(@senator.political_summary_for_senator.debt) %><br />
+      			<b>Last Updated</b>: <%= @senator.political_summary_for_senator.last_updated %>
+						
+					</p>
+		    </div>
+		  </dd>
+
+		  <dd>
 		    <a href="#social_media">Social Media</a>
 		    <div id="social_media" class="content">
 					<p>		
@@ -69,7 +85,7 @@
 				       </tr>
 			      </thead>
         	<tbody>						
-						<% @senator.additional_info_for_senators.each do |sen| %>
+						<% @senator.industry_contributions_for_senators.each do |sen| %>
 						
 						<tr>
 	            <td><%= sen.industry_name %></td>
