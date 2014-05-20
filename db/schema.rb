@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519190854) do
+ActiveRecord::Schema.define(version: 20140520075355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 20140519190854) do
 
   add_index "additional_info_for_senators", ["senator_id"], name: "index_additional_info_for_senators_on_senator_id", using: :btree
 
+  create_table "capitol_words_for_senators", force: true do |t|
+    t.integer "count"
+    t.string  "term"
+    t.integer "senator_id"
+  end
+
+  add_index "capitol_words_for_senators", ["senator_id"], name: "index_capitol_words_for_senators_on_senator_id", using: :btree
+
   create_table "industry_contributions_for_senators", force: true do |t|
     t.string  "industry_code"
     t.string  "industry_name"
@@ -64,6 +72,17 @@ ActiveRecord::Schema.define(version: 20140519190854) do
   end
 
   add_index "industry_contributions_for_senators", ["senator_id"], name: "index_industry_contributions_for_senators_on_senator_id", using: :btree
+
+  create_table "organization_contributions_for_senators", force: true do |t|
+    t.string  "org_name"
+    t.integer "total"
+    t.integer "senator_id"
+  end
+
+  add_index "organization_contributions_for_senators", ["senator_id"], name: "index_organization_contributions_for_senators_on_senator_id", using: :btree
+
+  create_table "pfd_for_senators", force: true do |t|
+  end
 
   create_table "political_summary_for_senators", force: true do |t|
     t.integer "first_elected"

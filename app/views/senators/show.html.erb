@@ -100,6 +100,33 @@
 		    </div>
 		  </dd>
 
+
+		  <dd>
+		    <a href="#organization_contribution">Contributions by Organization</a>
+		    <div id="organization_contribution" class="content">
+				<table>
+						<thead>
+				      <tr>
+				         <th>Organization Name</th>
+				         <th>Total Contributions</th>
+				       </tr>
+			      </thead>
+        	<tbody>						
+						<% @senator.organization_contributions_for_senators.each do |sen| %>
+						
+						<tr>
+	            <td><%= sen.org_name %></td>
+	            <td><%= number_to_currency(sen.total) %></td>
+          	</tr>
+
+          	<% end %>
+	    	  	</tbody>
+    			</table>
+		    </div>
+		  </dd>
+
+
+
 		</dl>
 	</div>
 </div>
