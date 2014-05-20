@@ -55,6 +55,34 @@
 		  </dd>
 
 		  <dd>
+		    <a href="#industry_contribution">Contributions by Industry</a>
+		    <div id="industry_contribution" class="content">
+				<table>
+						<thead>
+				      <tr>
+				         <th>Industry Name</th>
+				         <th>Individual $</th>
+				         <th>SuperPac $</th>
+				         <th>Total Contributions</th>
+				       </tr>
+			      </thead>
+        	<tbody>						
+						<% @representative.in_contributions_for_representatives.each do |rep| %>
+						
+						<tr>
+	            <td><%= rep.industry_name %></td>
+	            <td><%= number_to_currency(rep.industry_money_individuals) %></td>
+	            <td><%= number_to_currency(rep.industry_money_pacs) %></td>
+	            <td><%= number_to_currency(rep.industry_money_total) %></td>
+          	</tr>
+
+          	<% end %>
+	    	  	</tbody>
+    			</table>
+		    </div>
+		  </dd>
+
+		  <dd>
 		    <a href="#capitol_words">Top 10 Words Used</a>
 		    <div id="capitol_words" class="content">
 				<table>

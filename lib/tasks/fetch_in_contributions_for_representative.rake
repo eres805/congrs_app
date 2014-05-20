@@ -1,10 +1,11 @@
-namespace :additional_info_for_representatives do
+namespace :in_contributions_for_representatives do
 
-	desc "fetch addition representative info"
+	desc "fetch industry contributions for representative"
 	
 	task :fetch => :environment do
 
-		@representatives = Representative.where(id: 87..432)
+
+		@representatives = Representative.all
 		@representatives_crp_id_array = []
 
 		@representatives.each do |rep_info|
@@ -12,19 +13,19 @@ namespace :additional_info_for_representatives do
 		end
 
 		@representatives_crp_id_array.each do |rep|
-			if rep == ("N00005918" || "N00030670") 
+			if rep == ("N00005918") 
 
 			else
 	
-  		open_secrets_ind = HTTParty.get("http://www.opensecrets.org/api/?method=candIndustry&cid=#{rep}&cycle=2014&apikey=eb0ce7bfff28f53b44c23d6b22027dce")
+  		open_secrets_ind = HTTParty.get("http://www.opensecrets.org/api/?method=candIndustry&cid=#{rep}&cycle=2014&apikey=faecf82ba08569e62cfb16980b71a667")
 
   		@open_secrets_ind = open_secrets_ind.to_hash["response"]["industries"]["industry"]
 
 	  		@open_secrets_ind.each do |osi|
   		
   				representative_id = Representative.find_by(crp_id: rep)
-
-	  				AdditionalInfoForRepresentative.create({
+	  			
+	  			InContributionsForRepresentative.create({
 	  				industry_code: osi["industry_code"],
 	  				industry_name: osi["industry_name"],
 	  				industry_money_individuals: osi["indivs"],
@@ -32,8 +33,10 @@ namespace :additional_info_for_representatives do
 	  				industry_money_total: osi["total"],
 	  				representative_id: representative_id.id
 	  				})
+
 	  		end
 	  	end
+  
   end
-end
+
 end
