@@ -23,7 +23,7 @@ namespace :senators do
 
 	  			facebook_id: senator_data["facebook_id"],
 	  			twitter_id: senator_data["twitter_id"],
-	  			youtube_id: senator_data["first_name"],
+	  			youtube_id: senator_data["youtube_id"],
 
 	  			govtrack_id: senator_data["govtrack_id"],
 	  			crp_id: senator_data["crp_id"],

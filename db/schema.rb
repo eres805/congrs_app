@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520075355) do
+ActiveRecord::Schema.define(version: 20140520093122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(version: 20140520075355) do
   end
 
   add_index "additional_info_for_senators", ["senator_id"], name: "index_additional_info_for_senators_on_senator_id", using: :btree
+
+  create_table "capitol_words_for_representatives", force: true do |t|
+    t.integer "count"
+    t.string  "term"
+    t.integer "representative_id"
+  end
+
+  add_index "capitol_words_for_representatives", ["representative_id"], name: "index_capitol_words_for_representatives_on_representative_id", using: :btree
 
   create_table "capitol_words_for_senators", force: true do |t|
     t.integer "count"

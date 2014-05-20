@@ -25,7 +25,7 @@ namespace :representatives do
 
 	  			facebook_id: representative_data["facebook_id"],
 	  			twitter_id: representative_data["twitter_id"],
-	  			youtube_id: representative_data["first_name"],
+	  			youtube_id: representative_data["youtube_id"],
 
 	  			govtrack_id: representative_data["govtrack_id"],
 	  			crp_id: representative_data["crp_id"],

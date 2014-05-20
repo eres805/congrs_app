@@ -13,7 +13,7 @@ namespace :organization_contributions_for_senators do
 
 		@senators_crp_id_array.each do |sen|
 	
-  		open_secrets_org = HTTParty.get("http://www.opensecrets.org/api/?method=candContrib&cid=#{sen}&cycle=2014&apikey=63d23c972e6f7113b53b00bb1e72ad39")
+  		open_secrets_org = HTTParty.get("http://www.opensecrets.org/api/?method=candContrib&cid=#{sen}&cycle=2014&apikey=eb0ce7bfff28f53b44c23d6b22027dce")
 
   		@open_secrets_org = open_secrets_org["response"]["contributors"]["contributor"]
 

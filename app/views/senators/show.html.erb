@@ -53,9 +53,10 @@
 		    <a href="#social_media">Social Media</a>
 		    <div id="social_media" class="content">
 					<p>		
-						<a href="http://facebook.com/<%= @senator.facebook_id %>" target="_blank">Facebook</a><br />
-						<a href="http://twitter.com/<%= @senator.twitter_id %>" target="_blank">Twitter</a><br />
-						<a href="http://youtube.com/<%= @senator.youtube_id %>" target="_blank">YouTube</a><br />
+						
+						<a href="http://facebook.com/<%= @senator.facebook_id %>" target="_blank"><%= image_tag("social_media/facebook.png") %></a>
+						<a href="http://twitter.com/<%= @senator.twitter_id %>" target="_blank"><%= image_tag("social_media/twitter.png") %></a>
+						<a href="http://youtube.com/<%= @senator.youtube_id %>" target="_blank"><%= image_tag("social_media/youtube.png") %></a>
 					</p>
 		    </div>
 		  </dd>
@@ -125,6 +126,30 @@
 		    </div>
 		  </dd>
 
+		  <dd>
+		    <a href="#capitol_words">Top 10 Words Used</a>
+		    <div id="capitol_words" class="content">
+				<table>
+						<thead>
+				      <tr>
+				         <th>Term</th>
+				         <th>Times Said</th>
+				       </tr>
+			      </thead>
+        	<tbody>		
+        				<% @senator_word_sort = @senator.capitol_words_for_senators.order(count: :desc).take(10) %>				
+						<% @senator_word_sort.each do |sen| %>
+						
+						<tr>
+	            <td><%= sen.term %></td>
+	            <td><%= sen.count %></td>
+          	</tr>
+
+          	<% end %>
+	    	  	</tbody>
+    			</table>
+		    </div>
+		  </dd>
 
 
 		</dl>

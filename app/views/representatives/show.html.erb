@@ -35,9 +35,9 @@
 		    <a href="#social_media">Social Media</a>
 		    <div id="social_media" class="content">
 					<p>		
-						<a href="http://facebook.com/<%= @representative.facebook_id %>" target="_blank">Facebook</a><br />
-						<a href="http://twitter.com/<%= @representative.twitter_id %>" target="_blank">Twitter</a><br />
-						<a href="http://youtube.com/<%= @representative.youtube_id %>" target="_blank">YouTube</a><br />
+						<a href="http://facebook.com/<%= @representative.facebook_id %>" target="_blank"><%= image_tag("social_media/facebook.png") %></a>
+						<a href="http://twitter.com/<%= @representative.twitter_id %>" target="_blank"><%= image_tag("social_media/twitter.png") %></a>
+						<a href="http://youtube.com/<%= @representative.youtube_id %>" target="_blank"><%= image_tag("social_media/youtube.png") %></a>
 					</p>
 		    </div>
 		  </dd>
@@ -51,6 +51,31 @@
 						<b>Office</b>: <%= @representative.office %><br />
 						<b>Contact Form</b>: <a href="<%= @representative.contact_form %>" target="_blank">Click Here</a>
 					</p>
+		    </div>
+		  </dd>
+
+		  <dd>
+		    <a href="#capitol_words">Top 10 Words Used</a>
+		    <div id="capitol_words" class="content">
+				<table>
+						<thead>
+				      <tr>
+				         <th>Term</th>
+				         <th>Times Said</th>
+				       </tr>
+			      </thead>
+        	<tbody>		
+        			<% @representative_word_sort = @representative.capitol_words_for_representatives.order(count: :desc).take(10) %>				
+					<% @representative_word_sort.each do |rep| %>
+						
+			<tr>
+	            <td><%= rep.term %></td>
+	            <td><%= rep.count %></td>
+          	</tr>
+
+          	<% end %>
+	    	  	</tbody>
+    			</table>
 		    </div>
 		  </dd>
 
