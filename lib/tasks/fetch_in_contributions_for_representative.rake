@@ -40,3 +40,5 @@ namespace :in_contributions_for_representatives do
   end
 
 end
+
+end

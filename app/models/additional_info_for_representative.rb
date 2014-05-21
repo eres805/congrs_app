@@ -1,6 +1,6 @@
-class AdditionalInfoForRepresentative < ActiveRecord::Base
+# class AdditionalInfoForRepresentative < ActiveRecord::Base
 
-	belongs_to :representative
+# 	belongs_to :representative
 
-end
+# end
 

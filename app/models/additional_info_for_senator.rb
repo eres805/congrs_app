@@ -1,7 +1,7 @@
-class AdditionalInfoForSenator < ActiveRecord::Base
+# class AdditionalInfoForSenator < ActiveRecord::Base
 
-	belongs_to :senator
+# 	belongs_to :senator
 
 
-end
+# end
 

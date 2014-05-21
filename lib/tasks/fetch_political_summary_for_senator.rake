@@ -13,7 +13,7 @@ namespace :political_summary_for_senators do
 
 		@senators_crp_id_array.each do |sen|
 	
-  		open_secrets_sum = HTTParty.get("http://www.opensecrets.org/api/?method=candSummary&cid=#{sen}&cycle=2014&apikey=eb0ce7bfff28f53b44c23d6b22027dce")
+  		open_secrets_sum = HTTParty.get("http://www.opensecrets.org/api/?method=candSummary&cid=#{sen}&cycle=2014&apikey=faecf82ba08569e62cfb16980b71a667")
 
   		@open_secrets_sum = open_secrets_sum.to_hash["response"]
 
