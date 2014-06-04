@@ -50,11 +50,6 @@ gem 'foundation-rails'
 
 gem 'simplecov', :require => false, :group => :test
 
-
-group :development do
-  gem 'pry-rails'
-end
-
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'capybara'

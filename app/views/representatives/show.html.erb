@@ -23,6 +23,7 @@
 		    <a href="#political_info">Political Info</a>
 		    <div id="political_info" class="content">
 					<p>
+						<b>Party</b>: <%= @representative.party %><br />
 						<b>Term Start</b>: <%= @representative.term_start.strftime("%m/%d/%Y") %><br />
 						<b>Term End</b>: <%= @representative.term_end.strftime("%m/%d/%Y") %><br />
 						<b>State</b>: <%= @representative.state.name %><br />
