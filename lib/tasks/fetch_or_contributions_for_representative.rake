@@ -13,7 +13,7 @@ namespace :or_contributions_for_representatives do
 		end
 
 		@representatives_crp_id_array.each do |rep|
-			if rep == "N00034746" || rep == "N00033274" || rep == "N00005918" || rep == "N00004227"
+			if rep == ""
 
 			else
 	
