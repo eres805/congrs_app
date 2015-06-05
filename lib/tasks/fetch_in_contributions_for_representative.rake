@@ -4,7 +4,7 @@ namespace :in_contributions_for_representatives do
 	
 	task :fetch => :environment do
 
-		@representatives = Representative.all
+		@representatives = Representative.where.not(bioguide_id: "D000625")
 		@representatives_crp_id_array = []
 
 		@representatives.each do |rep_info|
@@ -12,7 +12,7 @@ namespace :in_contributions_for_representatives do
 		end
 
 		@representatives_crp_id_array.each do |rep|
-			if rep == ""
+			if rep === ""
 
 			else
 		
