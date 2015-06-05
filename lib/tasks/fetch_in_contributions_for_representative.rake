@@ -12,9 +12,7 @@ namespace :in_contributions_for_representatives do
 		end
 
 		@representatives_crp_id_array.each do |rep|
-			if rep === ""
 
-			else
 		
 	
   		open_secrets_ind = HTTParty.get("http://www.opensecrets.org/api/?method=candIndustry&cid=#{rep}&cycle=2014&apikey=faecf82ba08569e62cfb16980b71a667")
@@ -38,7 +36,7 @@ namespace :in_contributions_for_representatives do
 	 	
 	 	end
   
-  end
+  
 
 end
 
